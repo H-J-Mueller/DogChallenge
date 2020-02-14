@@ -1,0 +1,38 @@
+
+namespace Dog
+{
+    public class Dog
+    {
+        public string name;
+        public string owner;
+        public int age;
+        public enum gender;
+        {
+          Male, 
+          Female
+        }
+        
+        public Dog(string name, string owner, int age, gender)
+        {
+            this.name = name;
+            this.owner = owner;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        public void Bark(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                Console.Write("Woof!");
+            }
+            Console.WriteLine("");
+        }
+
+        public string GetTag()
+        {
+            return String.Format("If lost, call {0}. Their name is {1} and they is {2} years old.", 
+                                 owner, name, age);
+        }
+    }
+}
